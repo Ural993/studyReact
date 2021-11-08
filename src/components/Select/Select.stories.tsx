@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions'
 import { Select } from './Select';
 import { ComponentStory } from '@storybook/react';
 
+
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 
 
@@ -19,7 +20,7 @@ export default {
 
 export const SelectStories = () => {
     let [selectValue, setSelectValue] = useState('none')
-    let [collapsed, setCollapsed] = useState<boolean>(true)
+    let [collapsed, setCollapsed] = useState<boolean>(false)
     const onChange = (title: any) => {
         setSelectValue(title)
         setCollapsed(false)
