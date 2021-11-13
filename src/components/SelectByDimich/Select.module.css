@@ -1,0 +1,26 @@
+.title {
+    width: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.items {
+
+    padding: 5px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.select.active .items {
+    display: block;
+}
+
+
+.select {
+    width: 100px;
+    border: 1px solid black;
+}
+
+.selected {
+    background-color: rgb(185, 142, 142);
+}

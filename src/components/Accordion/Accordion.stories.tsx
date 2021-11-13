@@ -9,10 +9,11 @@ import { ComponentStory } from '@storybook/react';
 const Template: ComponentStory<typeof Accordion> = (args) => <Accordion {...args} />;
 export const MenuCollapsedMode = Template.bind({})
 const callback = action('accordion mode change event fier')
+const onClickcallback = action('some item wos clicked')
 MenuCollapsedMode.args = {
     titleValue: 'Menu',
     collapsed: true,
-    onChange: callback
+    onChange: onClickcallback
 }
 export default {
     title: 'Accordion stories',
@@ -20,7 +21,7 @@ export default {
 }
 
 export const MenuUncollapsedMode = () => <Accordion titleValue={'Menu'} collapsed={false} onChange={callback}
-    onClick={callback}
+    onClick={onClickcallback}
     items={[
         { title: 'Ural', value: 1 },
         { title: 'Maxim', value: 2 },
@@ -30,7 +31,7 @@ export const MenuUncollapsedMode = () => <Accordion titleValue={'Menu'} collapse
 export const CangeRating = () => {
     let [collapsed, setCollapsed] = useState<boolean>(true)
     return <Accordion titleValue={'Menu'} onChange={() => setCollapsed(!collapsed)} collapsed={collapsed}
-        onClick={callback}
+        onClick={onClickcallback}
         items={[
             { title: 'Ural', value: 1 },
             { title: 'Ural', value: 2 },
