@@ -24,16 +24,23 @@ export const SimpleExample = () => {
 
 export const SetTimeoutExample = () => {
     console.log('SetTimeoutExample')
-    let [counter, setCount] = useState(1)
+    let [hour, setHour] = useState(0)
+    let [sec, setSec] = useState(0)
+    let [min, setMin] = useState(0)
     useEffect(()=>{
         setInterval(()=>{
-            setCount(state=>state+1)
+            let hour = new Date().getHours()
+            setHour(hour)
+            let min = new Date().getMinutes()
+            setMin(min)
+            let sec = new Date().getSeconds()
+            setSec(sec)
         },1000)
     },[])
 
     return (
         <>
-            Hello {counter}
+            Time  = {hour}:{min}:{sec}
             {/*<button onClick={() => setCount(counter+1)}>+</button>*/}
 
         </>
