@@ -9,7 +9,7 @@ export const Clock: React.FC<PropsType> = (props: PropsType) => {
     const [date, setDate] = useState(new Date())
     useEffect(() => {
         const setIntervalId = setInterval(() => {
-            // console.log('tik')
+             console.log('tik')
             setDate(new Date())
         }, 1000);
         return () => {
